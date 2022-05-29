@@ -25,7 +25,6 @@ public class P06BalancedBrackets {
                     flag2 = true;
                     break;
                 } else if (symbol == '(') {
-                    flag1 = true;
                     flag2 = true;
                     break;
                 }
