@@ -17,8 +17,8 @@ public class P10TreasureHunt {
                 case "Loot":
                     for (int i = 1; i < commandParts.length; i++) {
                         boolean alreadyContained = false;
-                        for (int j = 0; j < treasureChest.length; j++) {
-                            if (commandParts[i].equals(treasureChest[j])) {
+                        for (String s : treasureChest) {
+                            if (commandParts[i].equals(s)) {
                                 alreadyContained = true;
                                 break;
                             }
