@@ -70,20 +70,13 @@ public class P10TreasureHunt {
                     }
                     System.out.println();
                     break;
-
             }
-
-
             command = scanner.nextLine();
         }
 
         String treasureCount = String.join("", treasureChest);
-        int charCounter = 0;
-        for (int i = 0; i < treasureCount.length(); i++) {
-            charCounter++;
-        }
-        double averageTreasure = (1.0 * charCounter) / treasureChest.length;
-        if (charCounter > 0) {
+        double averageTreasure = (1.0 * treasureCount.length()) / treasureChest.length;
+        if (treasureCount.length() > 0) {
             System.out.printf("Average treasure gain: %.2f pirate credits.", averageTreasure);
         } else {
             System.out.println("Failed treasure hunt.");
