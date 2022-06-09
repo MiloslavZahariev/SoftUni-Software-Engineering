@@ -12,6 +12,12 @@ public class P10MultiplyEvensByOdds {
 
     }
 
+    private static int getMultiplyOfEvensAndOdds(int input) {
+        int evenSums = getSumOfEvenDigits(input);
+        int oddSums = getSumOfOddDigits(input);
+        return evenSums * oddSums;
+    }
+
     public static int getSumOfEvenDigits(int digits) {
         int evenSum = 0;
         while (digits > 0) {
@@ -36,10 +42,5 @@ public class P10MultiplyEvensByOdds {
         return oddSum;
     }
 
-    private static int getMultiplyOfEvensAndOdds(int n){
-    int evenSums = getSumOfEvenDigits(n);
-    int oddSums = getSumOfOddDigits(n);
-    return evenSums * oddSums;
-    }
 
 }
