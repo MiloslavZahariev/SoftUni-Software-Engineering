@@ -1,4 +1,4 @@
-package JavaProgramingFundamentals.Lists;
+package JavaProgramingFundamentals.Lists.Lab;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,10 +11,10 @@ public class P03MergingLists {
         Scanner scanner = new Scanner(System.in);
 
         List<Integer> firstList = Arrays.stream(scanner.nextLine().split(" "))
-                .map(Integer::parseInt).collect(Collectors.toList());
+                .map(Integer::parseInt).toList();
 
         List<Integer> secondList = Arrays.stream(scanner.nextLine().split(" "))
-                .map(Integer::parseInt).collect(Collectors.toList());
+                .map(Integer::parseInt).toList();
 
         List<Integer> resultList = new ArrayList<>();
 

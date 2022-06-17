@@ -1,4 +1,4 @@
-package JavaProgramingFundamentals.Lists;
+package JavaProgramingFundamentals.Lists.Lab;
 
 import java.util.Arrays;
 import java.util.Collections;
