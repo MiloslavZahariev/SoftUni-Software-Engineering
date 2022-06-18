@@ -36,8 +36,6 @@ public class P03TakeSkipRope {
             }
         }
 
-        // System.out.println(takeList);
-        //System.out.println(skipList);
     }
 
     private static void fillingTakeAndSkipLists(List<Integer> list, List<Integer> takeList, List<Integer> skipList) {
