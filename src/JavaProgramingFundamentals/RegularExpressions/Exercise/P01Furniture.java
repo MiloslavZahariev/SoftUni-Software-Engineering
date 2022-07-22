@@ -36,11 +36,7 @@ public class P01Furniture {
 
 
         System.out.println("Bought furniture:");
-
-        for (String name : furnitureArr) {
-            System.out.println(name);
-        }
-
+        furnitureArr.forEach(System.out::println);
         System.out.printf("Total money spend: %.2f",totalSum);
     }
 }
