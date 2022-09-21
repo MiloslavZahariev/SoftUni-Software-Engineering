@@ -1,4 +1,4 @@
-package JavaProgramingAdvanced.SetsAndMapsAdvanced;
+package JavaProgramingAdvanced.SetsAndMapsAdvanced.Lab;
 
 import java.util.Scanner;
 import java.util.Set;
