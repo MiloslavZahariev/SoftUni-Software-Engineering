@@ -14,7 +14,7 @@ public class P02WriteToFile {
 
         FileInputStream i = new FileInputStream(path);
 
-        FileOutputStream outputStream = new FileOutputStream("output.txt");
+        FileOutputStream outputStream = new FileOutputStream("resources/02.WriteToFileOutput.txt");
 
         int bytes = i.read();
 
