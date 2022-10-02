@@ -1,4 +1,4 @@
-package JavaProgramingAdvanced.DefiningClasses.Lab.P01CarInfo;
+package JavaProgramingAdvanced.DefiningClasses.Lab.P02Constructors;
 
 public class Car {
     private String brand;
@@ -10,10 +10,10 @@ public class Car {
         this.model = model;
         this.horsePower = horsePower;
     }
+
     public Car(String brand) {
         this(brand, "unknown", -1);
     }
-
 
     public String getBrand() {
         return brand;
@@ -45,3 +45,4 @@ public class Car {
                 brand, model, horsePower);
     }
 }
+

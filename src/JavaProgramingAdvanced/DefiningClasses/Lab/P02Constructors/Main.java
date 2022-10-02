@@ -1,5 +1,4 @@
-package JavaProgramingAdvanced.DefiningClasses.Lab.P01CarInfo;
-
+package JavaProgramingAdvanced.DefiningClasses.Lab.P02Constructors;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,11 +14,9 @@ public class Main {
         for (int i = 0; i < numberOfCars; i++) {
             String[] carData = scanner.nextLine().split(" ");
 
-            String brand = carData[0];
-            String model = carData[1];
-            int horsePower = Integer.parseInt(carData[2]);
-
-            Car car = new Car(brand,model,horsePower);
+            Car car = carData.length == 1
+                    ? new Car(carData[0])
+                    : new Car(carData[0], carData[1], Integer.parseInt(carData[2]));
 
             carList.add(car);
         }
