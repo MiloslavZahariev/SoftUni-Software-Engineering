@@ -30,10 +30,7 @@ public class P11ReverseMatrixDiagonals {
             }
             System.out.println();
         }
-
-
     }
-
     private static boolean isValidIndex(int startRow, int startCol, int[][] matrix) {
 
         return startRow >= 0 && startCol >= 0 && startRow < matrix.length && startCol < matrix[0].length;
