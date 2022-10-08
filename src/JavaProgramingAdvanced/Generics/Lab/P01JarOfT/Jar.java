@@ -1,4 +1,4 @@
-package JavaProgramingAdvanced.Generics.Lab.JarOfT;
+package JavaProgramingAdvanced.Generics.Lab.P01JarOfT;
 
 import java.util.ArrayDeque;
 
