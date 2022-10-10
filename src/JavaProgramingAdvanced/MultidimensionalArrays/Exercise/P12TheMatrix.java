@@ -41,29 +41,21 @@ public class P12TheMatrix {
     }
 
     private static void fill(char[][] matrix, int r, int c, char newSymbol, char oldSymbol) {
-        if (matrix[r][c] == oldSymbol) {
-            matrix[r][c] = newSymbol;
+        if (!isValidIndex(r,c,oldSymbol,matrix)) {
+            return;
         }
-        if (isValidRow(r - 1, c, oldSymbol, matrix)) {
+        matrix[r][c] = newSymbol;
             fill(matrix, r - 1, c, newSymbol, oldSymbol);
-        }
-        if (isValidRow(r + 1, c, oldSymbol, matrix)) {
             fill(matrix, r + 1, c, newSymbol, oldSymbol);
-        }
-        if (isValidCol(r, c - 1, oldSymbol, matrix)) {
             fill(matrix, r, c - 1, newSymbol, oldSymbol);
-        }
-        if (isValidCol(r, c + 1, oldSymbol, matrix)) {
             fill(matrix, r, c + 1, newSymbol, oldSymbol);
-        }
+
     }
 
-    private static boolean isValidRow(int r, int c, char oldSymbol, char[][] matrix) {
-        return r >= 0 && r < matrix.length && matrix[r][c] == oldSymbol;
+    private static boolean isValidIndex(int r, int c, char oldSymbol, char[][] matrix) {
+        return r >= 0 && r < matrix.length && c >= 0 && c < matrix[r].length && matrix[r][c] == oldSymbol;
     }
 
-    private static boolean isValidCol(int r, int c, char oldSymbol, char[][] matrix) {
-        return c >= 0 && c < matrix[r].length && matrix[r][c] == oldSymbol;
-    }
+
 }
 
