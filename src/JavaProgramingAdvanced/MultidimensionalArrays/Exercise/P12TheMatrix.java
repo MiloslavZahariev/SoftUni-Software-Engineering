@@ -32,23 +32,23 @@ public class P12TheMatrix {
     }
 
     private static void printMatrix(char[][] matrix) {
-        for (int r = 0; r < matrix.length; r++) {
-            for (int c = 0; c < matrix[r].length; c++) {
-                System.out.print(matrix[r][c]);
+        for (char[] chars : matrix) {
+            for (char aChar : chars) {
+                System.out.print(aChar);
             }
             System.out.println();
         }
     }
 
     private static void fill(char[][] matrix, int r, int c, char newSymbol, char oldSymbol) {
-        if (!isValidIndex(r,c,oldSymbol,matrix)) {
+        if (!isValidIndex(r, c, oldSymbol, matrix)) {
             return;
         }
         matrix[r][c] = newSymbol;
-            fill(matrix, r - 1, c, newSymbol, oldSymbol);
-            fill(matrix, r + 1, c, newSymbol, oldSymbol);
-            fill(matrix, r, c - 1, newSymbol, oldSymbol);
-            fill(matrix, r, c + 1, newSymbol, oldSymbol);
+        fill(matrix, r - 1, c, newSymbol, oldSymbol);
+        fill(matrix, r + 1, c, newSymbol, oldSymbol);
+        fill(matrix, r, c - 1, newSymbol, oldSymbol);
+        fill(matrix, r, c + 1, newSymbol, oldSymbol);
 
     }
 
