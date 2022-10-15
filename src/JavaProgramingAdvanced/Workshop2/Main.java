@@ -1,21 +1,36 @@
 package JavaProgramingAdvanced.Workshop2;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        int n = Integer.parseInt(scanner.nextLine());
+        LinkedList<Integer> list = new LinkedList<>();
 
-        LinkedList<Double> list = new LinkedList<>();
-        list.addFirst(3.5);
-        list.addFirst(3.2);
-        list.addFirst(5.2);
-        list.addFirst(12.5);
-        list.addFirst(31.5);
+        for (int i = 0; i < n; i++) {
+            String[] commandLine = scanner.nextLine().split(" ");
 
-        System.out.println(list.removeLast());
-        System.out.println(list.removeFirst());
+            switch (commandLine[0]) {
+                case "Add":
+                    list.addLast(Integer.parseInt(commandLine[1]));
+                    break;
+                case "Remove":
 
+                   list.removeFirstValue(Integer.parseInt(commandLine[1]));
+                    break;
+            }
 
-        list.forEach(System.out::println);
+        }
+
+        System.out.println(list.getSize());
+        for (Integer i : list) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println();
+
 
     }
 }

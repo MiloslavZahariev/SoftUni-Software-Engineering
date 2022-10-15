@@ -1,9 +1,9 @@
 package JavaProgramingAdvanced.Workshop2;
 
 import java.lang.reflect.Array;
-import java.util.function.Consumer;
+import java.util.Iterator;
 
-public class LinkedList<T> {
+public class LinkedList<T> implements Iterable<T> {
 
     private Node<T> head;
     private Node<T> tail;
@@ -85,16 +85,35 @@ public class LinkedList<T> {
         return result;
     }
 
-    public void forEach(Consumer<T> consumer) {
+    public void removeFirstValue(T value) {
         Node<T> currentNode = head;
-        while (currentNode != null) {
-            consumer.accept(currentNode.value);
-            currentNode = currentNode.next;
+        int counter = 0;
+        while (currentNode.next != null) {
+            if (currentNode.value.equals(value)) {
+                if (counter == size) {
+                    removeLast();
+                    return;
+                }
+                if(counter == 0){
+                    removeFirst();
+                    return;
+                }
+                currentNode.prev.next = currentNode.next;
+                currentNode.next.prev = currentNode.prev;
+                size--;
+                return;
+
+            } else {
+                currentNode = currentNode.next;
+                counter++;
+            }
+
         }
     }
 
+
     public T[] toArray(Class<?> clazz) {
-        T[] arr = (T[]) Array.newInstance( clazz, size);
+        T[] arr = (T[]) Array.newInstance(clazz, size);
         int counter = 0;
         Node<T> currentNode = head;
         while (currentNode != null) {
@@ -110,9 +129,33 @@ public class LinkedList<T> {
         return this.size == 0;
     }
 
+    public int getSize(){
+        return this.size;
+    }
+
     public void checkIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("No such index in the list!");
         }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+
+            Node<T> currentNode = head;
+
+            @Override
+            public boolean hasNext() {
+                return currentNode != null;
+            }
+
+            @Override
+            public T next() {
+                T value = (currentNode.value);
+                currentNode = currentNode.next;
+                return value;
+            }
+        };
     }
 }
