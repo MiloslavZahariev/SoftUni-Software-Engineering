@@ -1,0 +1,50 @@
+package Demo.OldExams.sanctuary;
+
+public class Elephant implements Comparable<Elephant> {
+    private String name;
+    private int age;
+    private String retiredFrom;
+
+
+    public Elephant(String name, int age, String retiredFrom) {
+        setName(name);
+        setAge(age);
+        setRetiredFrom(retiredFrom);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getRetiredFrom() {
+        return retiredFrom;
+    }
+
+    public void setRetiredFrom(String retiredFrom) {
+        this.retiredFrom = retiredFrom;
+    }
+
+
+    @Override
+    public String toString() {
+        return String.format("%s %d - %s", getName(), getAge(), getRetiredFrom());
+    }
+
+
+    @Override
+    public int compareTo(Elephant other) {
+        return this.age - other.getAge();
+    }
+}
