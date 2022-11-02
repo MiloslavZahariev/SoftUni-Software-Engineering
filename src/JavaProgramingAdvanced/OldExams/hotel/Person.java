@@ -50,6 +50,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("Person %s: %d, Age: %d, Hometown: %s",name,id,age,hometown);
+        return String.format("JavaProgramingOOP.Encapsulation.Lab.Teams.Person %s: %d, Age: %d, Hometown: %s",name,id,age,hometown);
     }
 }

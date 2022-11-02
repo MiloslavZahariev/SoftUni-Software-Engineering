@@ -18,10 +18,10 @@ public class Main {
 
             if (!checkForTeamIsCreated(teamsList, teamName) && !checkForCreatorIsOnTeam(teamsList, user)) {
                 Teams team = new Teams(teamName, user);
-                System.out.printf("Team %s has been created by %s!%n", teamName, user);
+                System.out.printf("JavaProgramingOOP.Encapsulation.Lab.Teams.Team %s has been created by %s!%n", teamName, user);
                 teamsList.add(team);
             } else if (checkForTeamIsCreated(teamsList, teamName)) {
-                System.out.printf("Team %s was already created!%n", teamName);
+                System.out.printf("JavaProgramingOOP.Encapsulation.Lab.Teams.Team %s was already created!%n", teamName);
             } else if (checkForCreatorIsOnTeam(teamsList, user)) {
                 System.out.printf("%s cannot create another team!%n", user);
             }
@@ -34,7 +34,7 @@ public class Main {
             String user = input2.split("->")[0];
 
             if (!checkForTeamIsCreated(teamsList, teamName)) {
-                System.out.printf("Team %s does not exist!%n", teamName);
+                System.out.printf("JavaProgramingOOP.Encapsulation.Lab.Teams.Team %s does not exist!%n", teamName);
             } else if (checkForUserIsOnTeam(teamsList, user)  || checkForCreatorIsOnTeam(teamsList,user)) {
                 System.out.printf("Member %s cannot join team %s!%n", user, teamName);
             } else if(!checkForCreatorIsOnTeam(teamsList,user)){
