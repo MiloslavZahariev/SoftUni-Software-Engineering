@@ -6,9 +6,9 @@ public class Main {
         Habitat park = new Habitat(10);
 
 // Initialize entity
-        Elephant firstElephant = new Elephant("Bobby", 10, "Thailand Zoo");
+        Elephant firstElephant = new Elephant("Bobby", 10, "Thailand JavaProgramingOOP.Inheritance.Exercise.Zoo");
 // Print Elephant
-        System.out.println(firstElephant); //Bobby 10 - Thailand Zoo
+        System.out.println(firstElephant); //Bobby 10 - Thailand JavaProgramingOOP.Inheritance.Exercise.Zoo
 
 // Add Elephant
         park.add(firstElephant);
@@ -16,7 +16,7 @@ public class Main {
 // Remove Elephant
         System.out.println(park.remove("Bobby")); //true
         System.out.println(park.remove("Lola")); //false
-        Elephant secondElephant = new Elephant("Bibi", 5, "Private Zoo");
+        Elephant secondElephant = new Elephant("Bibi", 5, "Private JavaProgramingOOP.Inheritance.Exercise.Zoo");
         Elephant thirdElephant = new Elephant("Lola", 7, "National Circus of Thailand");
         park.add(secondElephant);
         park.add(thirdElephant);
@@ -25,8 +25,8 @@ public class Main {
         Elephant oldest = park.getOldestElephant();
         System.out.println(oldest); //Lola 7 - National Circus of Thailand
 
-        Elephant elephant = park.getElephant("Private Zoo");
-        System.out.println(elephant); //Bibi 5 - Private Zoo
+        Elephant elephant = park.getElephant("Private JavaProgramingOOP.Inheritance.Exercise.Zoo");
+        System.out.println(elephant); //Bibi 5 - Private JavaProgramingOOP.Inheritance.Exercise.Zoo
 
 // All elephants in the park
         System.out.println(park.getAllElephants()); //2
@@ -35,7 +35,7 @@ public class Main {
         System.out.println(park.getReport());
 
 //Saved elephants in the park:
-//Bibi came from: Private Zoo
+//Bibi came from: Private JavaProgramingOOP.Inheritance.Exercise.Zoo
 //Lola came from: National Circus of Thailand
 
     }
