@@ -46,7 +46,7 @@ public class Shelter {
     }
 
     public String getStatistics() {
-        StringBuilder sb = new StringBuilder("The JavaProgramingAdvanced.OldExams.shelter has the following animals:");
+        StringBuilder sb = new StringBuilder("The JavaProgramingAdvanced.OldExams.shelter has the following JavaProgramingOOP.Inheritance.Exercise.animals:");
         for (Animal animal : data) {
             sb.append(System.lineSeparator()).append(animal.getName()).append(" ").append(animal.getCaretaker());
         }

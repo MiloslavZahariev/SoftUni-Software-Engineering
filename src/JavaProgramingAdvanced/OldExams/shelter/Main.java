@@ -37,7 +37,7 @@ public class Main {
 
 // Get Statistics
         System.out.println(shelter.getStatistics());
-//The JavaProgramingAdvanced.OldExams.shelter has the following animals:
+//The JavaProgramingAdvanced.OldExams.shelter has the following JavaProgramingOOP.Inheritance.Exercise.animals:
 //Bela Sia
 //Stormy George
 
