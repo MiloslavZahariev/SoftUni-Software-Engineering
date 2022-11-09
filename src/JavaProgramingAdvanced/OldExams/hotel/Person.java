@@ -50,6 +50,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person %s: %d, Age: %d, Hometown: %s",name,id,age,hometown);
+        return String.format("JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person %s: %d, Age: %d, Hometown: %s",name,id,age,hometown);
     }
 }

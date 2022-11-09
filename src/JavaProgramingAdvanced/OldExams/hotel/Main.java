@@ -8,7 +8,7 @@ public class Main {
         Person person = new Person("Mark", 11111, 41, "Sofia");
         //Print person
         System.out.println(person);
-        //JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Mark: 11111, Age: 41, Hometown: Sofia
+        //JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Mark: 11111, Age: 41, Hometown: Sofia
 
         //Add person
         hotel.add(person);
@@ -29,21 +29,21 @@ public class Main {
         // Get person
         Person personForGet = hotel.getPerson("Lucy", "Birmingham");
         Person personForGet1 = hotel.getPerson("Anna", "Burgas");
-        System.out.println(personForGet); // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Lucy: 54122, Age: 31, Hometown: Birmingham
+        System.out.println(personForGet); // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Lucy: 54122, Age: 31, Hometown: Birmingham
         System.out.println(personForGet1); // null
 
         //Count
         System.out.println(hotel.getCount()); // 5
-        //Remove JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person
+        //Remove JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person
         System.out.println(hotel.remove("Alice")); //true
 
         // Get Statistics
         System.out.println(hotel.getStatistics());
         // The people in the JavaProgramingAdvanced.OldExams.hotel Hilton are:
-        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Mark: 11111, Age: 41, Hometown: Sofia
-        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Lizzy: 31311, Age: 24, Hometown: Varna
-        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Lucy: 54122, Age: 31, Hometown: Birmingham
-        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.Person Maria: 66611, Age: 41, Hometown: Sofia
+        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Mark: 11111, Age: 41, Hometown: Sofia
+        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Lizzy: 31311, Age: 24, Hometown: Varna
+        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Lucy: 54122, Age: 31, Hometown: Birmingham
+        // JavaProgramingOOP.Encapsulation.Lab.Teams.JavaProgramingOOP.Inheritance.Exercise.DefineAnInterfacePerson.Person Maria: 66611, Age: 41, Hometown: Sofia
 
 
     }
